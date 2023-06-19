@@ -18,7 +18,7 @@ cursor.execute(sql)
 conn.close()
 
 #table
-conn = mysql.connector.connect(user='root', password='password', host='127.0.0.1')
+conn = mysql.connector.connect(user='root', password='password', host='127.0.0.1', database='network')
 
 #Dropping EMPLOYEE table if already exists.
 cursor.execute("DROP TABLE IF EXISTS domain")
