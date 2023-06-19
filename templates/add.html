@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Basic Page Info -->
+	<meta charset="utf-8">
+	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+
+	<!-- Site favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="../vendors/images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../vendors/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../vendors/images/favicon-16x16.png">
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/core.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/icon-font.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='src/plugins/datatables/css/dataTables.bootstrap4.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='src/plugins/datatables/css/responsive.bootstrap4.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-119386393-1');
+	</script>
+</head>
+<body>
+
+	<div class="header">
+		<div class="header-left">
+			<div class="menu-icon dw dw-menu"></div>
+			<div class="search-toggle-icon dw dw-search2" data-toggle="header_search"></div>
+
+		</div>
+
+	</div>
+
+	<div class="left-side-bar">
+		<div class="brand-logo">
+			<a href="{{ url_for('home') }}">
+				<img src="{{ url_for('static',filename='images/deskapp-logo.svg')}}" alt="" class="dark-logo">
+				<img src="{{ url_for('static',filename='images/deskapp-logo-white.svg')}}" alt="" class="light-logo">
+			</a>
+			<div class="close-sidebar" data-toggle="left-sidebar-close">
+				<i class="ion-close-round"></i>
+			</div>
+		</div>
+		<div class="menu-block customscroll">
+			<div class="sidebar-menu">
+				<ul id="accordion-menu">
+                    <!-- Sidebar Menu -->
+					<li class="dropdown">
+						<a href="{{ url_for('home') }}" class="dropdown-toggle">
+							<span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
+						</a>
+					</li>
+					<li class="dropdown">
+						<a href="{{ url_for('add') }}" class="dropdown-toggle">
+							<span class="micon dw dw-edit2"></span><span class="mtext">Add</span>
+						</a>
+					</li>
+                    <!-- end Sidebar Menu -->
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-menu-overlay"></div>
+
+	<div class="main-container">
+		<div class="pd-ltr-20">
+
+			<!-- add form -->
+            <div class="pd-20 card-box mb-30">
+                <div class="clearfix">
+                    <div class="pull-left">
+                        
+                    </div>
+                </div>
+                <form method="post">
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-12 col-md-2 col-form-label">URL</label>
+                        <div class="col-sm-12 col-md-10">
+                            <input class="form-control" placeholder="bukalapak.com" type="text" id="domain" name="domain" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-12 col-md-2 col-form-label">Source</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="source" id="radio1" value="Route 5.3" checked>
+                            <label class="form-check-label" for="source">
+                                Route 5.3
+                            </label>
+                        </div>
+                        
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="source" id="radio2" value="Buka 2.0">
+                            <label class="form-check-label" for="radio">Buka 2.0</label>
+                        </div>
+						
+                      </div>
+					  <div class="form-group row">
+						<label class="col-sm-12 col-md-2 col-form-label"></label>
+						<div class="alert-success ">{{ msg }}
+						  </div>
+						<!-- <label class="msg form-check-label"></label> -->
+					</div>
+					  <div class="form-group row">
+                        <label class="col-sm-12 col-md-2 col-form-label"><button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                        </label>
+                    </div>
+                    </div>
+                </form>
+                
+            </div>
+
+            <!-- end form -->
+			<div class="footer-wrap pd-20 mb-20 card-box">
+				Security <a href="#" target="_blank">@redteam</a>
+			</div>
+		</div>
+	</div>
+	<!-- js -->
+	<script src="{{ url_for('static',filename='scripts/core.js') }}"></script>
+	<script src="{{ url_for('static',filename='scripts/script.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='scripts/process.js') }}"></script>
+	<script src="{{ url_for('static',filename='scripts/layout-settings.js') }}"></script>
+	<script src="{{ url_for('static',filename='src/plugins/apexcharts/apexcharts.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='src/plugins/datatables/js/jquery.dataTables.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='src/plugins/datatables/js/dataTables.bootstrap4.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='src/plugins/datatables/js/dataTables.responsive.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='src/plugins/datatables/js/responsive.bootstrap4.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='scripts/dashboard.js') }}"></script>
+</body>
+</html>

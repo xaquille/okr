@@ -1,0 +1,7 @@
+https://github.com/IRB0T/Python-For-Pentester/blob/master/Subdomain%20finder/subdomain_finder.py
+
+https://pypi.org/project/python3-nmap/
+
+wafw00f
+searchploit
+weasyprint
